@@ -1,0 +1,39 @@
+/* urcu/config.h.in. Manually generated for control over the contained defs. */
+
+/* Defined when on a system that has memory fence instructions. */
+#undef CONFIG_RCU_HAVE_FENCE
+
+/* Defined when on a system with futex support. */
+#undef CONFIG_RCU_HAVE_FUTEX
+
+/* Enable SMP support. With SMP support enabled, uniprocessors are also
+   supported. With SMP support disabled, UP systems work fine, but the
+   behavior of SMP systems is undefined. */
+#undef CONFIG_RCU_SMP
+
+/* Compatibility mode for i386 which lacks cmpxchg instruction. */
+#undef CONFIG_RCU_COMPAT_ARCH
+
+/* Use the dmb instruction is available for use on ARM. */
+#undef CONFIG_RCU_ARM_HAVE_DMB
+
+/* TLS provided by the compiler. */
+#undef CONFIG_RCU_TLS
+
+/* clock_gettime() is detected. */
+#undef CONFIG_RCU_HAVE_CLOCK_GETTIME
+
+/* Require the operating system to support the membarrier system call for
+   default and bulletproof flavors. */
+#undef CONFIG_RCU_FORCE_SYS_MEMBARRIER
+
+/* Enable internal debugging self-checks.
+   Introduce performance penalty. */
+#undef CONFIG_RCU_DEBUG
+
+/* Expose multi-flavor support */
+#define CONFIG_RCU_HAVE_MULTIFLAVOR 1
+
+/* Enable extra debugging checks for lock-free hash table iterator
+   traversal. */
+#undef CONFIG_CDS_LFHT_ITER_DEBUG

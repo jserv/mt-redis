@@ -1,0 +1,10 @@
+STD=-std=c99 -pedantic -DREDIS_STATIC=
+WARN=-Wall -W
+OPT=-O0
+MALLOC=libc
+CFLAGS=
+LDFLAGS=
+REDIS_CFLAGS=
+REDIS_LDFLAGS=
+PREV_FINAL_CFLAGS=-std=c99 -pedantic -DREDIS_STATIC= -Wall -W -O0 -g -ggdb -I../deps/geohash-int -I../deps/hiredis -I../deps/linenoise -I../deps/lua/src -D_POSIX_C_SOURCE=199309L -I../deps/install/include
+PREV_FINAL_LDFLAGS= -g -ggdb
