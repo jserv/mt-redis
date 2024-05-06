@@ -36,7 +36,7 @@ endif
 
 distclean:
 	-(cd hiredis && $(MAKE) clean) > /dev/null || true
-	-(cd linenoise && $(MAKE) clean) > /dev/null || true
+	-(cd linenoise && $(RM) linenoise.o) > /dev/null || true
 	-(cd lua && $(MAKE) clean) > /dev/null || true
 	-(cd geohash-int && $(MAKE) clean) > /dev/null || true
 	-(cd jemalloc && [ -f Makefile ] && $(MAKE) distclean) > /dev/null || true
@@ -54,7 +54,8 @@ hiredis: .make-prerequisites
 
 linenoise: .make-prerequisites
 	@printf '%b %b\n' $(MAKECOLOR)MAKE$(ENDCOLOR) $(BINCOLOR)$@$(ENDCOLOR)
-	cd linenoise && $(MAKE) CFLAGS="$(OPTIMIZATION) $(DEBUG_FLAGS)"
+	git submodule update --init $@
+	cd linenoise && $(MAKE) linenoise.o CFLAGS="$(OPTIMIZATION) $(DEBUG_FLAGS)"
 
 .PHONY: linenoise
 
