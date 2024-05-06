@@ -95,6 +95,7 @@ geohash-int: .make-prerequisites
 
 urcu: .make-prerequisites
 	@printf '%b %b\n' $(MAKECOLOR)MAKE$(ENDCOLOR) $(BINCOLOR)$@$(ENDCOLOR)
+	git submodule update --init $@
 	cd $@ && ./bootstrap
 	cd $@ && CFLAGS="-m64 $(OPTIMIZATION) $(DEBUG_FLAGS)" ./configure --prefix=$(DEPS_INSTALL_DIR)
 	cd $@/src && make

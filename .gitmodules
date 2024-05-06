@@ -1,0 +1,3 @@
+[submodule "deps/urcu"]
+	path = deps/urcu
+	url = https://github.com/urcu/userspace-rcu
