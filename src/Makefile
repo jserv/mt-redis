@@ -91,7 +91,7 @@ endif
 endif
 endif
 # Include paths to dependencies
-FINAL_CFLAGS+= -I../deps/hiredis -I../deps/linenoise -I../deps/lua/src
+FINAL_CFLAGS+= -I../deps/hiredis -I../deps/linenoise -I../deps/lua/src -I../deps/urcu/include
 
 FINAL_CFLAGS+= -D_POSIX_C_SOURCE=199309L
 FINAL_CFLAGS+= -I../deps/install/include
