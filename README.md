@@ -59,3 +59,10 @@ Gets       230705.95         0.00    230705.95         0.80290         0.75100  
 Waits           0.00          ---          ---             ---             ---             ---             ---          ---
 Totals     253801.92         0.00    230705.95         0.80802         0.75100         1.39900         2.81500     10765.79
 ```
+
+## Prerequisites
+
+To build mt-redis from source, install the build-essential meta-package from the Ubuntu repositories.
+```shell
+$ sudo apt install build-essential autoconf
+```
