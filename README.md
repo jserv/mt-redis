@@ -3,16 +3,16 @@
 A multi-threaded Redis fork with [Read-Copy-Update](https://liburcu.org/) (RCU) support to achieve high performance.
 
 ## Features
-1. Use an event-loop per thread I/O model.
-2. Support for scheduling request operations between threads.
-3. RCU can support lock-free sharing between 1 writer thread and multiple reader threads to boost read operation performance.
-4. Can achieve over 1 million ops/s powered by a normal commercial server.
+* Implement Master-Worker Pattern, allowing key-value store to perform simultaneous processing across multiple threads.
+* Use an event-loop per thread I/O model.
+* Support for scheduling request operations between threads.
+* RCU can support lock-free sharing between 1 writer thread and multiple reader threads to boost read operation performance.
+* Can achieve over 1 million Ops/sec powered by an ordinary server.
 
 ## Performance
 
-The following benchmarks show the performance of mt-redis and Redis using the the [memtier_benchmark](https://github.com/RedisLabs/memtier_benchmark) tool.
-
-These were produced on Linux with a Intel Xeon CPU E5-2650 v4 processor.
+The following benchmarks show the performance of mt-redis and Redis using the [memtier\_benchmark](https://github.com/RedisLabs/memtier_benchmark) tool.
+These benchmarks were produced on Ubuntu Linux 20.04-LTS with an Intel Xeon CPU E5-2650 v4 processor.
 
 ### Valkey 7.2.5
 
